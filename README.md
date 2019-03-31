@@ -23,10 +23,9 @@ Things you may want to cover:
 
 * ...
 
-#user_groupテーブル
+#users_groupsテーブル
 
 |Column|Type|Option|
-|:------|----:|:------:|
 |name|string|null:false|
 |user_id|integer|null:false,foreign_key:true|
 |group_id|integer|null:false,foreign_key:true|
@@ -38,19 +37,18 @@ Things you may want to cover:
 #userテーブル
 
 |column|type|option|
-|------|----|------|
 |name|string|null:false|
 |email|string|null:false|
 |passwaord|string|null:false|
 
 ##アソシエーション
-- has_many :groups,throgh user_group
+- has_many :groups,throgh users_groups
 - has_many :messages
+- has_many :users_groups
 
 #messageテーブル
 
 |column|type|option|
-|------|----|------|
 |text|text|null:false|
 |image|text||
 |group_id|integer|null:false|
@@ -63,13 +61,13 @@ Things you may want to cover:
 #groupテーブル
 
 |column|type|option|
-|------|----|------|
 |name|string|null:false|
 |user_id|integer|null:false|
 |message_id|integer|null:false|
 
 ##アソシエーション
-- has_many :users,through user_group
-- has_many :message
+- has_many :users,through users_groups
+- has_many :messages
+-has_many :users_groups
 
 
