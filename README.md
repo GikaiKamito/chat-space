@@ -25,7 +25,7 @@ Things you may want to cover:
 
 #user_groupテーブル
 |Column|Type|Option|
-|------|----|------|
+|:------|----:|:------:|
 |name|string|null:false|
 |user_id|integer|null:false,foreign_key:true|
 |group_id|integer|null:false,foreign_key:true|
