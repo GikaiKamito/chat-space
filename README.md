@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 
 #user_groupテーブル
+
 |Column|Type|Option|
 |:------|----:|:------:|
 |name|string|null:false|
@@ -35,6 +36,7 @@ Things you may want to cover:
 - belongs_to :user
 
 #userテーブル
+
 |column|type|option|
 |------|----|------|
 |name|string|null:false|
@@ -46,6 +48,7 @@ Things you may want to cover:
 - has_many :messages
 
 #messageテーブル
+
 |column|type|option|
 |------|----|------|
 |text|text|null:false|
@@ -58,6 +61,7 @@ Things you may want to cover:
 - belongs_to :group
 
 #groupテーブル
+
 |column|type|option|
 |------|----|------|
 |name|string|null:false|
