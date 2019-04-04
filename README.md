@@ -49,7 +49,7 @@ Things you may want to cover:
 #messageテーブル
 
 |column|type|option|
-|text|text|null:false|
+|text|text||
 |image|text||
 |group_id|integer|null:false|
 |user_id|integer|null:false|
@@ -62,8 +62,8 @@ Things you may want to cover:
 
 |column|type|option|
 |name|string|null:false|
-|user_id|integer|null:false|
-|message_id|integer|null:false|
+|user_id|integer||
+|message_id|integer||
 
 ##アソシエーション
 - has_many :users,through users_groups
