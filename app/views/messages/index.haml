@@ -7,6 +7,11 @@
     .content_left
       .contentleft_head
         .p1 test
+        .font
+          =link_to do
+            %i.fas.fa-cog
+          =link_to do
+            %i.fas.fa-edit
       .contentleft_body
         .p2 ttttttt
         .p3 ttttttttt
@@ -14,11 +19,22 @@
     .content_right
       .message_edit
         .edit edit
-        .p5 ttttt
         .p6 tttttt
+        .p66 ttttttt
       .messages
-        .p7 test
-        .p8 test
-        .p9 test
-        .p10 test
+        .box1
+          .p7 test
+          .p77 test
+        .box2
+          .p8 test
+          .p9 test
+          .p10 test
+        
       .message_send
+        %form
+          %input{:type=>"text"}
+            %label
+              %i.fa.fa-image
+              %input{:type=>"file"}
+            
+          %input{:type=>"submit",:value=>"Send"}
