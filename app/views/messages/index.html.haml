@@ -1,0 +1,34 @@
+.content-left
+  .content-left_head
+    .content-left_head_title test
+    .content-left_head_font
+      =link_to do
+        %i.fas.fa-cog
+      =link_to do
+        %i.fas.fa-edit
+  .content-left_body
+    .left_body_message1 ttttttt
+    .left_body_message2 ttttttttt
+    .left_body_message3 tttttttt
+
+.content-right
+  .content-right_edit
+    .content-right_edit_btn edit
+    .right_edit_message1 tttttt
+    .right_edit_message2 ttttttt
+  .content-right_body
+    .right_body_box1
+      .right_body_box1_message1 test
+      .right_body_box1_message2 test
+    .right_body_box2
+      .right_body_box2_message1 test
+      .right_body_box2_message2 test
+      .right_body_box2_message3 test
+
+  .message-send
+    %form
+      %input{:type=>"text"}
+        %label
+          %i.fa.fa-image
+          %input{:type=>"file"}
+      %input{:type=>"submit",:value=>"Send"}

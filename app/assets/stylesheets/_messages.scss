@@ -16,29 +16,26 @@ header{
 }
 
 .content-left_head{
-	height: 100px;
+    height: 100px;
 	background-color: #253142;
-}
-
-.content-left_head_title{
-font-weight: bold;
-font-size: 16px;
-margin: $margin;
-padding-top: 35px;
-color: $white;
-width: 50px;
-float: left;
-}
-
-.content-left_head_font{
-	float: right;
-	padding-top: 35px;
-	margin-right: 20px;
-	text-decoration: none;
-}
-
-.fas{
-	    color: white;
+    &_title{
+		font-weight: bold;
+		font-size: 16px;
+		margin: $margin;
+		padding-top: 35px;
+		color: $white;
+		width: 50px;
+		float: left;
+    }
+	&_font{
+		float: right;
+		padding-top: 35px;
+		margin-right: 20px;
+		text-decoration: none;
+	}
+	.fas{
+		color: white;
+	}
 }
 
 .content-left_body{
@@ -46,22 +43,20 @@ float: left;
 	font-weight: bold;
 	color: $white;
 	font-size: 15px;
-	.group-first_message{
-		margin-top:20px;
+	.left_body_message1{
+	    margin-top:20px;
 	}
-	.group-second_message{
+	.left_body_message2{
 		font-size: 11px;
 		margin-top: 5px;
 	}
-	.group-third_message{
+	.left_body_message3{
 		margin-top: 40px;
 	}
 }
 
-
-
 .content-right{
-	height: 100vh;
+    height: 100vh;
     width: calc(100vw - 300px);
 	float: right;
 }
@@ -69,21 +64,19 @@ float: left;
 .content-right_edit{
 	height: 100px;
 	border-bottom: solid 5px #eeeeee;
-}
-
-.edit-group-first_message{
-	margin:$margin2;
-	padding-top: 35px;
-	font-size: 20px;
-	color: #333333;
-}
-
-.edit-group-second_message{
-	margin: $margin2;
-	padding-top:15px;
-	font-size: 12px;
-	color: #999999;
-	box-sizing: border-box;
+	.right_edit_message1{
+		margin:$margin2;
+		padding-top: 35px;
+		font-size: 20px;
+		color: #333333;
+	}
+	.right_edit_message2{
+		margin: $margin2;
+		padding-top:15px;
+		font-size: 12px;
+		color: #999999;
+		box-sizing: border-box;
+	}
 }
 
 .content-right_edit_btn{
@@ -97,38 +90,38 @@ float: left;
     color: #38AEF0;
 }
 
-.content-right_messages{
+.content-right_body{
 	height: calc(100vh - 105px - 100px);
 	background-color: #fafafa;
-  .messages-box_first{
-		padding-top: 46px;
+    .right_body_box1{
+	    padding-top: 46px;
 		margin: $margin2;
-	.messages-box_first_first{
-		display: inline-block;
-	}
-	.messages-box_first_second{
-		display: inline-block;
-		margin-left: 10px;
-		font-size: 12px;
-		color: #999999;
+	    &_message1{
+		    display: inline-block;
+	    }
+	    &_message2{
+		    display: inline-block;
+		    margin-left: 10px;
+		    font-size: 12px;
+		    color: #999999;
 	}
   }
 }
 
-.messages-box_second{
-  	margin: $margin2;
-	.messages-box_second_first{
-       padding-top: 10px;
+.right_body_box2{
+    margin: $margin2;
+	&_message1{
+        padding-top: 10px;
     }
-	.messages-box_second_second{
-       padding-top: 40px;
-       font-size: 16px;
-       color: $text;
-       font-weight: bold;
+	&_message2{
+        padding-top: 40px;
+        font-size: 16px;
+        color: $text;
+        font-weight: bold;
 	}
-	.messages-box_second_thrid{
-       font-size: 14px;
-       color: $text;
+	&_message3{
+        font-size: 14px;
+        color: $text;
 	}
 }
 
@@ -143,32 +136,32 @@ float: left;
 form{
 	height: 46px;
 	border: none;
-  input[type="text"]{
-    padding-left: 10px;
-    font-size: 16px;
-    color: $text;
-    width: 912px;
-    border: none;
-  }
-  label{
-    input[type="file"]{
-    position: absolute;
-    z-index: 10;
-    display: none;
+    input[type="text"]{
+        padding-left: 10px;
+        font-size: 16px;
+        color: $text;
+        width: 912px;
+        border: none;
     }
-  }
-  i.fa.fa-image{
-    position: relative;
-    z-index: 20;
-  }
-  input[type="submit"]{
-    height: 50px;
-    width: 111px;
-    background-color: #38AEF0;
-    color: white;
-    border-left: solid 15px grey;
-    border-bottom: none;
-    border-right: none;
-    border-top: none;
-  }
+    label{
+        input[type="file"]{
+            position: absolute;
+            z-index: 10;
+            display: none;
+        }
+    }
+    i.fa.fa-image{
+        position: relative;
+        z-index: 20;
+    }
+    input[type="submit"]{
+        height: 50px;
+        width: 111px;
+        background-color: #38AEF0;
+        color: white;
+        border-left: solid 15px grey;
+        border-bottom: none;
+        border-right: none;
+        border-top: none;
+    }
 }
