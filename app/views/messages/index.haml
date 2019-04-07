@@ -1,40 +1,38 @@
-!!!
-%html{lang: "ja"}
-  %head
-    %meta{charset: "utf-8"}
+%html
   %body
     %header rere
-    .content_left
-      .contentleft_head
-        .p1 test
-        .font
+    
+    .content-left
+      .content-left_head
+        .content-left_head_title test
+        .content-left_head_font
           =link_to do
             %i.fas.fa-cog
           =link_to do
             %i.fas.fa-edit
-      .contentleft_body
-        .p2 ttttttt
-        .p3 ttttttttt
-        .p4 tttttttt
-    .content_right
-      .message_edit
-        .edit edit
-        .p6 tttttt
-        .p66 ttttttt
-      .messages
-        .box1
-          .p7 test
-          .p77 test
-        .box2
-          .p8 test
-          .p9 test
-          .p10 test
-        
-      .message_send
+      .content-left_body
+        .group-first_message ttttttt
+        .group-second_message ttttttttt
+        .group-third_message tttttttt
+
+    .content-right
+      .content-right_edit
+        .content-right_edit_btn edit
+        .edit-group-first_message tttttt
+        .edit-group-second_message ttttttt
+      .content-right_messages
+        .messages-box_first
+          .messages-box_first_first test
+          .messages-box_first_second test
+        .messages-box_second
+          .messages-box_second_first test
+          .messages-box_second_second test
+          .messages-box_second_thrid test
+
+      .message-send
         %form
           %input{:type=>"text"}
             %label
               %i.fa.fa-image
               %input{:type=>"file"}
-            
           %input{:type=>"submit",:value=>"Send"}

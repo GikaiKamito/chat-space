@@ -1,0 +1,174 @@
+body{
+	width: 100vw;
+	height: 100vh;
+}
+
+header{
+	background-color: #38AEF0;
+	text-align: center;
+}
+
+.content-left{
+	background-color: #2f3e51;
+	float: left;
+	width: 300px;
+	height: 100vh;
+}
+
+.content-left_head{
+	height: 100px;
+	background-color: #253142;
+}
+
+.content-left_head_title{
+font-weight: bold;
+font-size: 16px;
+margin: $margin;
+padding-top: 35px;
+color: $white;
+width: 50px;
+float: left;
+}
+
+.content-left_head_font{
+	float: right;
+	padding-top: 35px;
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+.fas{
+	    color: white;
+}
+
+.content-left_body{
+	margin: $margin;
+	font-weight: bold;
+	color: $white;
+	font-size: 15px;
+	.group-first_message{
+		margin-top:20px;
+	}
+	.group-second_message{
+		font-size: 11px;
+		margin-top: 5px;
+	}
+	.group-third_message{
+		margin-top: 40px;
+	}
+}
+
+
+
+.content-right{
+	height: 100vh;
+    width: calc(100vw - 300px);
+	float: right;
+}
+
+.content-right_edit{
+	height: 100px;
+	border-bottom: solid 5px #eeeeee;
+}
+
+.edit-group-first_message{
+	margin:$margin2;
+	padding-top: 35px;
+	font-size: 20px;
+	color: #333333;
+}
+
+.edit-group-second_message{
+	margin: $margin2;
+	padding-top:15px;
+	font-size: 12px;
+	color: #999999;
+	box-sizing: border-box;
+}
+
+.content-right_edit_btn{
+	float: right;
+	height: 40px;
+	border: solid 2px #38AEF0;
+	margin: 28px 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+    line-height: 1;
+    color: #38AEF0;
+}
+
+.content-right_messages{
+	height: calc(100vh - 105px - 100px);
+	background-color: #fafafa;
+  .messages-box_first{
+		padding-top: 46px;
+		margin: $margin2;
+	.messages-box_first_first{
+		display: inline-block;
+	}
+	.messages-box_first_second{
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 12px;
+		color: #999999;
+	}
+  }
+}
+
+.messages-box_second{
+  	margin: $margin2;
+	.messages-box_second_first{
+       padding-top: 10px;
+    }
+	.messages-box_second_second{
+       padding-top: 40px;
+       font-size: 16px;
+       color: $text;
+       font-weight: bold;
+	}
+	.messages-box_second_thrid{
+       font-size: 14px;
+       color: $text;
+	}
+}
+
+.message-send{
+	height: 50px;
+    border-top: solid 25px grey;
+    border-bottom: solid 25px grey;
+    border-left: solid 40px grey;
+    border-right: solid 40px grey
+}
+
+form{
+	height: 46px;
+	border: none;
+  input[type="text"]{
+    padding-left: 10px;
+    font-size: 16px;
+    color: $text;
+    width: 912px;
+    border: none;
+  }
+  label{
+    input[type="file"]{
+    position: absolute;
+    z-index: 10;
+    display: none;
+    }
+  }
+  i.fa.fa-image{
+    position: relative;
+    z-index: 20;
+  }
+  input[type="submit"]{
+    height: 50px;
+    width: 111px;
+    background-color: #38AEF0;
+    color: white;
+    border-left: solid 15px grey;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+  }
+}
