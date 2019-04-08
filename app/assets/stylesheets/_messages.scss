@@ -1,0 +1,24 @@
+body{
+	width: 100vw;
+	height: 100vh;
+}
+
+header{
+	background-color: #38AEF0;
+	text-align: center;
+}
+
+.content-left{
+	background-color: #2f3e51;
+	float: left;
+	width: 300px;
+	height: 100vh;
+}
+@import "./content-left";
+
+.content-right{
+    height: 100vh;
+    width: calc(100vw - 300px);
+	float: right;
+}
+@import "./content-right";
