@@ -1,34 +1,37 @@
+%header ttttttt
+
 .content-left
-  .content-left_head
-    .content-left_head_title test
-    .content-left_head_font
+  .content-left-head
+    .content-left-head__title test
+    .content-left-head__font
       =link_to do
-        %i.fas.fa-cog
+        =fa_icon("cog")
       =link_to do
-        %i.fas.fa-edit
-  .content-left_body
-    .left_body_message1 ttttttt
-    .left_body_message2 ttttttttt
-    .left_body_message3 tttttttt
+        =fa_icon("edit")
+  .content-left-body
+    .left-body-message1 ttttttt
+    .left-body-message2 ttttttttt
+    .left-body-message3 tttttttt
 
 .content-right
-  .content-right_edit
-    .content-right_edit_btn edit
-    .right_edit_message1 tttttt
-    .right_edit_message2 ttttttt
-  .content-right_body
-    .right_body_box1
-      .right_body_box1_message1 test
-      .right_body_box1_message2 test
-    .right_body_box2
-      .right_body_box2_message1 test
-      .right_body_box2_message2 test
-      .right_body_box2_message3 test
+  .content-right-edit
+    .content-right-edit-btn edit
+    .content-right-edit__message1 tttttt
+    .content-right-edit__message2 ttttttt
+
+  .content-right-body
+    .content-right-body__box1
+      .content-right-body__box1--message1 test
+      .content-right-body__box1--message2 test
+    .content-right-body__box2
+      .content-right-body__box2--message1 test
+      .content-right-body__box2--message2 test
+      .content-right-body__box2--message3 test
 
   .message-send
     %form
       %input{:type=>"text"}
         %label
-          %i.fa.fa-image
+          =fa_icon("image")
           %input{:type=>"file"}
       %input{:type=>"submit",:value=>"Send"}
