@@ -2,10 +2,12 @@
 
 .content-left
   .content-left-head
-    .content-left-head__title test
+    .content-left-head__title 
+    =current_user.name
     .content-left-head__font
-      =link_to do
+      =link_to edit_user_path(current_user) do
         =fa_icon("cog")
+        
       =link_to do
         =fa_icon("edit")
   .content-left-body
