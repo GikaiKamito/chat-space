@@ -1,25 +1,17 @@
-%header ttttttt
+%header uuuuuuu
 
-.content-left
-  .content-left-head
-    .content-left-head__title 
-    =current_user.name
-    .content-left-head__font
-      =link_to edit_user_path(current_user) do
-        =fa_icon("cog")
-        
-      =link_to do
-        =fa_icon("edit")
-  .content-left-body
-    .left-body-message1 ttttttt
-    .left-body-message2 ttttttttt
-    .left-body-message3 tttttttt
+=render "shared/content_left"
+      
 
 .content-right
   .content-right-edit
-    .content-right-edit-btn edit
-    .content-right-edit__message1 tttttt
-    .content-right-edit__message2 ttttttt
+    .left-header
+      .left-header__message1 tttttt
+      .left-header__message2 ttttttt
+    = link_to edit_group_path(current_user) do
+      .content-right-edit-btn
+        .edit edit
+        
 
   .content-right-body
     .content-right-body__box1
