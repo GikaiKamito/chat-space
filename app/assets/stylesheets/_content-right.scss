@@ -1,21 +1,22 @@
 
 .content-right-edit{
-	height: 100px;
-	border-bottom: solid 5px #eeeeee;
-
+  box-sizing: border-box;
+  height: 100px;
+  border-bottom: solid 5px #eeeeee;
+  padding: 0 40px;
+  .left-header{
+    float:left;
 	&__message1{
-		margin:$margin2;
-		padding-top: 35px;
+        padding-top: 35px;
 		font-size: 20px;
 		color: #333333;
 	}
 	&__message2{
-		margin: $margin2;
 		padding-top:15px;
 		font-size: 12px;
 		color: #999999;
-		box-sizing: border-box;
-	}
+    }
+  }
 }
 
 .content-right-edit-btn{
@@ -39,7 +40,9 @@
 		margin: $margin2;
 
 	    &--message1{
-		    display: inline-block;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
 	    }
 	    &--message2{
 		    display: inline-block;
@@ -84,7 +87,7 @@ form{
         padding-left: 10px;
         font-size: 16px;
         color: $text;
-        width: 911px;
+        width: 906px;
         border: none;
     }
     label{
