@@ -71,7 +71,7 @@
     }
 }
 
-.message-send{
+.form{
 	height: 50px;
     border-top: solid 25px grey;
     border-bottom: solid 25px grey;
@@ -79,29 +79,30 @@
     border-right: solid 40px grey
 }
 
-form{
-	height: 46px;
-	border: none;
-
-    input[type="text"]{
+.new_message{
+    .form__message{
         padding-left: 10px;
         font-size: 16px;
         color: $text;
         width: 906px;
         border: none;
+        position: relative;
+        z-index: 10;
     }
-    label{
-        input[type="file"]{
+    .form__mask{
+        position: absolute;
+        z-index: 20;
+        .hidden{
             position: absolute;
             z-index: 10;
             display: none;
         }
-    }
-    i.fa.fa-image{
+       .icon{
         position: relative;
         z-index: 20;
+        }
     }
-    input[type="submit"]{
+    .form__submit{
         height: 50px;
         width: 111px;
         background-color: #38AEF0;
@@ -110,5 +111,6 @@ form{
         border-bottom: none;
         border-right: none;
         border-top: none;
+        float: right;
     }
 }
