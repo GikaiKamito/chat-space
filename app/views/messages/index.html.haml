@@ -1,31 +1,19 @@
-%header uuuuuuu
-
 =render "shared/content_left"
-      
 
 .content-right
   .content-right-edit
     .left-header
-      .left-header__message1 tttttt
-      .left-header__message2 ttttttt
+      .left-header__message1
+        = @group.name
+      .left-header__message2
+        - @group.users.each do |users|
+          = users.name
     = link_to edit_group_path(current_user) do
       .content-right-edit-btn
         .edit edit
-        
+  .messages
+    = render @messages
 
-  .content-right-body
-    .content-right-body__box1
-      .content-right-body__box1--message1 test
-      .content-right-body__box1--message2 test
-    .content-right-body__box2
-      .content-right-body__box2--message1 test
-      .content-right-body__box2--message2 test
-      .content-right-body__box2--message3 test
+  .wrapper
+    = render "shared/form"
 
-  .message-send
-    %form
-      %input{:type=>"text"}
-        %label
-          =fa_icon("image")
-          %input{:type=>"file"}
-      %input{:type=>"submit",:value=>"Send"}
