@@ -1,17 +1,17 @@
 .content-left
-  .content-left-head
-    .content-left-head__title 
+  .head
+    .head__title 
       =current_user.name
-    .content-left-head__font
+    .head__font
       =link_to edit_user_path(current_user) do
         =fa_icon("cog") 
       =link_to new_group_path do
         =fa_icon("edit")
-  .content-left-body 
+  .body 
     - current_user.groups.each do |group|
-      .left-body-message1
+      .body-group
         = link_to group_messages_path(group) do
-          .left-body-message2 
+          .group-name
             = group.name
-          .left-body-message3 
+          .group-message
             = group.show_last_message

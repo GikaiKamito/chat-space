@@ -30,48 +30,32 @@
     color: #38AEF0;
 }
 
-
-.content-right-body{
-	height: calc(100vh - 105px - 100px);
-	background-color: #fafafa;
-
-    &__box1{
+.messages{
+    height: calc(100vh - 100px - 100px);
+    background-color: #fafafa;
+    overflow: auto;
+   
+  .message{
 	    padding-top: 46px;
 		margin: $margin2;
-
-	    &--message1{
+	    &__name{
             display: inline-block;
             font-size: 16px;
             font-weight: bold;
 	    }
-	    &--message2{
+	    &__date{
 		    display: inline-block;
 		    margin-left: 10px;
 		    font-size: 12px;
 		    color: #999999;
 	    }
-    }
-
-    &__box2{
-        margin: $margin2;
-
-    	&--message1{
-            padding-top: 10px;
+    	&__text{
+            padding-top: 10px;  
         }
-    	&--message2{
-            padding-top: 40px;
-            font-size: 16px;
-            color: $text;
-            font-weight: bold;
-    	}
-    	&--message3{
-            font-size: 14px;
-            color: $text;
-    	}
     }
 }
 
-.form{
+.wrapper{
 	height: 50px;
     border-top: solid 25px grey;
     border-bottom: solid 25px grey;
@@ -79,38 +63,39 @@
     border-right: solid 40px grey
 }
 
-.new_message{
-    .form__message{
-        padding-left: 10px;
-        font-size: 16px;
-        color: $text;
-        width: 906px;
-        border: none;
-        position: relative;
-        z-index: 10;
-    }
-    .form__mask{
+.form{
+.form__message{
+    padding-left: 10px;
+    font-size: 16px;
+    color: #434A54;
+    width: 880px;
+    border: none;
+    position: absolute;
+    bottom: 40px;
+}
+.form__mask{
+    position: absolute;
+    bottom: 40px;
+    right: 170px;
+    .hidden{
         position: absolute;
-        z-index: 20;
-        .hidden{
-            position: absolute;
-            z-index: 10;
-            display: none;
-        }
-       .icon{
-        position: relative;
-        z-index: 20;
-        }
+        z-index: 10;
+        display: none;
     }
-    .form__submit{
-        height: 50px;
-        width: 111px;
-        background-color: #38AEF0;
-        color: white;
-        border-left: solid 15px grey;
-        border-bottom: none;
-        border-right: none;
-        border-top: none;
-        float: right;
+    .icon{
+    position: relative;
+    z-index: 20;
     }
+}
+}
+.form__submit{
+    height: 50px;
+    width: 111px;
+    background-color: #38AEF0;
+    color: white;
+    border-left: solid 15px grey;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    float: right; 
 }
