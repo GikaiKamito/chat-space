@@ -63,7 +63,7 @@
 }
 
 .form{
-  .form__message{
+  &__message{
     padding-left: 10px;
     font-size: 16px;
     color: #434A54;
@@ -72,7 +72,7 @@
     position: absolute;
     bottom: 40px;
   }
-  .form__mask{
+  &__mask{
     position: absolute;
     bottom: 40px;
     right: 170px;
