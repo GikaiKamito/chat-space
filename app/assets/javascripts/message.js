@@ -26,16 +26,10 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data)
-      //var target = $('.message').last();
-      //var position = target.offset().top;
-    
       $('.messages').append(html)
-      $('.form__message').val('')
+      $('.new_message')[0].reset()
       $('.form__submit').removeAttr("disabled")
-      //$(".messages").animate({scrollTop : position });
-      
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-
     })
     .fail(function(){
       alert('送信失敗')
