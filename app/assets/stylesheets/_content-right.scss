@@ -7,110 +7,94 @@
   .left-header{
     float:left;
 	&__message1{
-        padding-top: 35px;
-		font-size: 20px;
-		color: #333333;
+      padding-top: 35px;
+	  font-size: 20px;
+	  color: #333333;
 	}
 	&__message2{
-		padding-top:15px;
-		font-size: 12px;
-		color: #999999;
+	  padding-top:15px;
+	  font-size: 12px;
+	  color: #999999;
     }
   }
 }
 
 .content-right-edit-btn{
-	float: right;
-	height: 40px;
-	border: solid 2px #38AEF0;
-	margin: 28px 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
-    line-height: 1;
-    color: #38AEF0;
+  float: right;
+  height: 40px;
+  border: solid 2px #38AEF0;
+  margin: 28px 40px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  line-height: 1;
+  color: #38AEF0;
 }
 
-
-.content-right-body{
-	height: calc(100vh - 105px - 100px);
-	background-color: #fafafa;
-
-    &__box1{
-	    padding-top: 46px;
-		margin: $margin2;
-
-	    &--message1{
-            display: inline-block;
-            font-size: 16px;
-            font-weight: bold;
-	    }
-	    &--message2{
-		    display: inline-block;
-		    margin-left: 10px;
-		    font-size: 12px;
-		    color: #999999;
-	    }
+.messages{
+  height: calc(100vh - 100px - 100px);
+  background-color: #fafafa;
+  overflow: auto;
+  .message{
+    padding-top: 46px;
+    margin: $margin2;
+    &__name{
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
     }
-
-    &__box2{
-        margin: $margin2;
-
-    	&--message1{
-            padding-top: 10px;
-        }
-    	&--message2{
-            padding-top: 40px;
-            font-size: 16px;
-            color: $text;
-            font-weight: bold;
-    	}
-    	&--message3{
-            font-size: 14px;
-            color: $text;
-    	}
+    &__date{
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 12px;
+      color: #999999;
+	}
+    &__text{
+      padding-top: 10px;  
     }
+  }
+}
+
+.wrapper{
+  height: 50px;
+  border-top: solid 25px grey;
+  border-bottom: solid 25px grey;
+  border-left: solid 40px grey;
+  border-right: solid 40px grey
 }
 
 .form{
-	height: 50px;
-    border-top: solid 25px grey;
-    border-bottom: solid 25px grey;
-    border-left: solid 40px grey;
-    border-right: solid 40px grey
-}
-
-.new_message{
-    .form__message{
-        padding-left: 10px;
-        font-size: 16px;
-        color: $text;
-        width: 906px;
-        border: none;
-        position: relative;
-        z-index: 10;
-    }
-    .form__mask{
+  &__message{
+    padding-left: 10px;
+    font-size: 16px;
+    color: #434A54;
+    width: 880px;
+    border: none;
+    position: absolute;
+    bottom: 40px;
+  }
+  &__mask{
+    position: absolute;
+    bottom: 40px;
+    right: 170px;
+      .hidden{
         position: absolute;
-        z-index: 20;
-        .hidden{
-            position: absolute;
-            z-index: 10;
-            display: none;
-        }
-       .icon{
-        position: relative;
-        z-index: 20;
-        }
-    }
-    .form__submit{
-        height: 50px;
-        width: 111px;
-        background-color: #38AEF0;
-        color: white;
-        border-left: solid 15px grey;
-        border-bottom: none;
-        border-right: none;
-        border-top: none;
-        float: right;
-    }
+        z-index: 10;
+        display: none;
+      }
+      .icon{
+         position: relative;
+         z-index: 20;
+      }
+  }
+}
+.form__submit{
+  height: 50px;
+  width: 111px;
+  background-color: #38AEF0;
+  color: white;
+  border-left: solid 15px grey;
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+  float: right; 
 }

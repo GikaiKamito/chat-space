@@ -1,9 +1,7 @@
-
-
-.content-left-head{
-    height: 100px;
+.head{
+  height: 100px;
 	background-color: #253142;
-    &__title{
+  &__title{
 		font-weight: bold;
 		font-size: 16px;
 		margin: $margin;
@@ -11,7 +9,7 @@
 		color: $white;
 		width: 50px;
 		float: left;
-    }
+  }
 	&__font{
 		float: right;
 		padding-top: 35px;
@@ -23,20 +21,20 @@
 	}
 }
 
-.content-left-body{
+.body{
 	margin: $margin;
-	font-weight: bold;
-	color: $white;
-	font-size: 15px;
 	height: calc(100vh - 100px);
-	.left-body-message1{
-	    margin-top:20px;
+	overflow: scroll;
+	.body-group{
+		margin-top:20px;
+		margin-bottom: 40px;
 	}
-	.left-body-message2{
-		font-size: 11px;
+	.group-name{
+	  font-weight: bold;
+	  color: white;
+	}
+	.group-message{
 		margin-top: 5px;
-	}
-	.left-body-message3{
-		margin-top: 40px;
+		color: white;
 	}
 }
