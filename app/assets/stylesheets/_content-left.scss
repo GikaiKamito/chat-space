@@ -1,5 +1,3 @@
-
-
 .head{
   height: 100px;
 	background-color: #253142;
@@ -11,7 +9,7 @@
 		color: $white;
 		width: 50px;
 		float: left;
-    }
+  }
 	&__font{
 		float: right;
 		padding-top: 35px;
@@ -32,8 +30,8 @@
 		margin-bottom: 40px;
 	}
 	.group-name{
-		font-weight: bold;
-		color: white;
+	  font-weight: bold;
+	  color: white;
 	}
 	.group-message{
 		margin-top: 5px;

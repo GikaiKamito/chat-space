@@ -17,9 +17,8 @@ header{
 @import "./content-left";
 
 .content-right{
-    height: 100vh;
-    width: calc(100vw - 300px);
+  height: 100vh;
+  width: calc(100vw - 300px);
 	float: right;
-	
 }
 @import "./content-right";
