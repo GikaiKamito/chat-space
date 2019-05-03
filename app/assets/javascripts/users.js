@@ -1,25 +1,27 @@
 $(function(){
+  var search = $('#user-search-result')
 
-  function buildHTML(users){
+  function appendUser(user){
     var html =`
     <div class="chat-group-user clearfix">
-    <p class="chat-group-user__name">${users.name}</p>
-    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="user_name" data-user-name="">追加</div>
+    <p class="chat-group-user__name">${user.name}</p>
+    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="" data-user-name="${user.name}">追加</div>
     </div>
     `      
-    return html;
+    search.append(html)
   }
 
-  function buildHtml22(users){
-    var html22 =`
-    <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
-    <input name='group[user_ids][]' type='hidden' value='ユーザーのid'>
-    <p class='chat-group-user__name'>${users.name}</p>
+  function addUser(name,user_id){
+    var html =`
+    <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${user_id}'>
+    <input name='group[user_ids][]' type='hidden' value='${user_id}'>
+    <p class='chat-group-user__name'>${name}</p>
     <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
     </div>
-  `
-  return html22;
+    `
+    $("#chat-group-user-22").append(html)
   }
+  
   $("#user-search-field").on("keyup",function(){
     var input = $("#user-search-field").val();
     $.ajax({ 
@@ -30,22 +32,24 @@ $(function(){
       contentType: false,
       dataType: 'json' 
     })
+
     .done(function(data){
-      $(data).each(function(i,user){
-        var html = buildHTML(user)
-        $('#user-search-result').append(html)
-      })
-
-      $('.user-search-add.chat-group-user__btn.chat-group-user__btn--add').on("click", function () {
-        $(data).each(function(i,user){
-        var html22 = buildHtml22(user)
-        $('#chat-group-user-22.chat-group-user.clearfix').append(html22)
+      $("#user-search-result").empty();
+        data.forEach(function(user){
+          appendUser(user)
         })
-      });
-
-    })
+      })
     .fail(function(){
       alert('検索失敗')
+    });
+  })
+
+  $("#user-search-result").on("click", ".chat-group-user__btn--add", function(e){
+    var name = $(this).data("user-name");
+    var user_id = $(this).data("user-id");
+    addUser(name,user_id);
+    $(this).parent().remove();
   });
+  
 })
-})
+
