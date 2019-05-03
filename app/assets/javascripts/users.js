@@ -5,7 +5,7 @@ $(function(){
     var html =`
     <div class="chat-group-user clearfix">
     <p class="chat-group-user__name">${user.name}</p>
-    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="" data-user-name="${user.name}">追加</div>
+    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
     </div>
     `      
     search.append(html)
@@ -34,9 +34,10 @@ $(function(){
     })
 
     .done(function(data){
+      console.log(data)
       $("#user-search-result").empty();
-        data.forEach(function(user){
-          appendUser(user)
+        data.forEach(function(i,user){
+          appendUser(i,user)
         })
       })
     .fail(function(){
@@ -50,6 +51,8 @@ $(function(){
     addUser(name,user_id);
     $(this).parent().remove();
   });
-  
+  $("#chat-group-users").on("click", ".js-remove-btn", function(e){
+    $(this).parent().remove();
+  });
 })
 
