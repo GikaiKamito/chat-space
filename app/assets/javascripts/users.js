@@ -34,7 +34,6 @@ $(function(){
     })
 
     .done(function(data){
-      console.log(data)
       $("#user-search-result").empty();
         data.forEach(function(i,user){
           appendUser(i,user)
