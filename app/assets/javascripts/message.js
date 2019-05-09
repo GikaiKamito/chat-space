@@ -3,7 +3,7 @@ $(function(){
     var image = message.image == null ?  "" : `<img src= ${ message.image}>`;
     var content = message.content == null ?  "" : `${ message.content }`;
     var html = `
-    <div class = message>
+    <div class = message data-id=${message.id}>
     <div class = message__name>${message.user_name}</div>
     <div class = message__date>${message.date}</div>
     <div class = message__text>${content}</div>
@@ -11,6 +11,10 @@ $(function(){
     </div>
     `
     return html;
+  }
+  
+  function scroll(){
+    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -29,10 +33,35 @@ $(function(){
       $('.messages').append(html)
       $('.new_message')[0].reset()
       $('.form__submit').removeAttr("disabled")
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      scroll()
     })
     .fail(function(){
       alert('送信失敗')
     })
   })
-})
+  var reloadMessages = function() {
+    last_message_id = $('.message').last().data('id')
+    //console.log(last_message_id) 
+    $.ajax({
+      url: "/groups/:group_id/api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(data) {
+      if (data.empty){
+        $('.messages').append(buildHTML)
+      }
+      else{
+        data.forEach(function(message) {
+          $('.messages').append(buildHTML(message));
+          scroll();
+        })
+      }
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
+  setInterval(reloadMessages, 5000);
+});
