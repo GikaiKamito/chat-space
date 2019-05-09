@@ -41,7 +41,6 @@ $(function(){
   })
   var reloadMessages = function() {
     last_message_id = $('.message').last().data('id')
-    //console.log(last_message_id) 
     $.ajax({
       url: "/groups/:group_id/api/messages",
       type: 'get',
@@ -50,9 +49,10 @@ $(function(){
     })
     .done(function(data) {
       if (data.empty){
-        $('.messages').append(buildHTML)
+        scroll();
       }
       else{
+        console.log(data)
         data.forEach(function(message) {
           $('.messages').append(buildHTML(message));
           scroll();
@@ -60,8 +60,8 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('更新できませんでした');
     });
   };
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 3000);
 });
