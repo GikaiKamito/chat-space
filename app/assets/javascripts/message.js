@@ -33,7 +33,7 @@ $(function(){
       $('.messages').append(html)
       $('.new_message')[0].reset()
       $('.form__submit').removeAttr("disabled")
-      scroll()
+      scroll();
     })
     .fail(function(){
       alert('送信失敗')
@@ -52,7 +52,6 @@ $(function(){
         scroll();
       }
       else{
-        console.log(data)
         data.forEach(function(message) {
           $('.messages').append(buildHTML(message));
           scroll();
@@ -63,5 +62,5 @@ $(function(){
       alert('更新できませんでした');
     });
   };
-  setInterval(reloadMessages, 3000);
+  setInterval(reloadMessages, 5000);
 });
