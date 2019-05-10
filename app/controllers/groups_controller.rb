@@ -4,7 +4,7 @@ before_action :set_group, only: [:edit, :update]
   end
 
   def new
-    @group = Group.new
+    @group = Group.new(group_params)
     @group.users << current_user
   end
 
