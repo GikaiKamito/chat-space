@@ -10,7 +10,11 @@ $(function(){
     `      
     search.append(html)
   }
-
+  function appendNoUser(user) {
+    var html =
+    `<div class = "chat-group-user clearfix">${user}</div>`
+    search.append(html);
+  }
   function addUser(name,user_id){
     var html =`
     <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${user_id}'>
@@ -19,11 +23,15 @@ $(function(){
     <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
     </div>
     `
-    $("#chat-group-user-22").append(html)
+    $("#chat-group-users").append(html)
   }
   
   $("#user-search-field").on("keyup",function(){
     var input = $("#user-search-field").val();
+    if (input == ""){
+      $("#user-search-result").empty();
+    }
+    else{
     $.ajax({ 
       url: '/users', 
       type: 'GET', 
@@ -32,16 +40,21 @@ $(function(){
       contentType: false,
       dataType: 'json' 
     })
-
     .done(function(data){
       $("#user-search-result").empty();
-        data.forEach(function(i,user){
-          appendUser(i,user)
+      if(data.length !== 0){
+      data.forEach(function(i,user){
+        appendUser(i,user)
         })
-      })
+      }
+      else{
+        appendNoUser("一致するユーザーはいません")
+      }
+    })
     .fail(function(){
       alert('検索失敗')
     });
+  }
   })
 
   $("#user-search-result").on("click", ".chat-group-user__btn--add", function(e){

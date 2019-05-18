@@ -8,7 +8,7 @@
       .left-header__message2
         - @group.users.each do |users|
           = users.name
-    = link_to edit_group_path(current_user) do
+    = link_to edit_group_path(@group) do
       .content-right-edit-btn
         .edit edit
   .messages

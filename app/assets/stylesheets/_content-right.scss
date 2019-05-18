@@ -65,16 +65,16 @@
 .form{
   &__message{
     padding-left: 10px;
+    padding-top: 10px;
     font-size: 16px;
     color: #434A54;
     width: 880px;
     border: none;
     position: absolute;
-    bottom: 40px;
   }
   &__mask{
     position: absolute;
-    bottom: 40px;
+    padding-top: 10px;
     right: 170px;
       .hidden{
         position: absolute;
